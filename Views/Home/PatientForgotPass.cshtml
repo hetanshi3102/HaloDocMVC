@@ -1,4 +1,4 @@
-﻿@* @model HaloDoc_Final.Web.ViewModel.PatientForgotPass; *@
+﻿@model HaloDocDataAccess.ViewModels.PatientLoginDetails;
 
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
@@ -13,7 +13,7 @@
         <i class="fa fa-2x fa-moon-o moon text-info border rounded p-2" aria-hidden="true"></i>
     </div>
     <div class="container d-flex align-items-center justify-content-center blurcard">
-        <form class="form-group row d-flex align-items-center justify-content-center row-main " asp-controller="Home" asp-action="PatientForgotPassword">
+        <form class="form-group row d-flex align-items-center justify-content-center row-main " asp-controller="Home" asp-action="PatientForgotPass">
             <div class="col-sm-12">
                 <div class="col-sm d-flex justify-content-center">
                     <img src="~/images/HaloDoc-Logo.png" alt="" />
@@ -25,7 +25,7 @@
                 </div>
                 <h3>Reset your Password</h3>
                 <div class="col-sm-12 w-100 justify-content-center mt-4">
-                    <input @* asp-for="Email" *@ type="email" placeholder="Username" class="form-control form-control-md col-md col-sm mt-4" />
+                    <input asp-for="Email" type="email" placeholder="Username" class="form-control form-control-md col-md col-sm mt-4" />
                 </div>
 
                 <div class="col-w-100">

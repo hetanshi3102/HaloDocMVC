@@ -22,4 +22,8 @@
     <ProjectReference Include="..\HaloDocRepository\HaloDocRepository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\PatientDashboard\" />
+  </ItemGroup>
+
 </Project>

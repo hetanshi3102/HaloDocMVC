@@ -1,5 +1,5 @@
-﻿@* @model HaloDoc_Final.DataModels.AspNetUser;
- *@<!DOCTYPE html>
+﻿@model HaloDocDataAccess.ViewModels.PatientLoginDetails;
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 <head>
     <meta charset="UTF-8" />
@@ -25,15 +25,15 @@
                 </div>
                 <h3>Log into your Account</h3>
                 @* ------------Form------------ *@
-                <form asp-controller="Home" asp-action="Validate" method="post">
+                <form method="post">
                     <div class="text-danger">@ViewData["error"]</div>
                     <div class="col-sm-12 justify-content-center mt-4">
-                        <input @* asp-for="Email"  *@name="Email" type="email" placeholder="Username" class="form-control" required />
+                        <input asp-for="Email" name="Email" type="email" placeholder="Username" class="form-control" required />
                     </div>
                     <span @* asp-validation-for="Email" *@ class="text-danger validate col-12"></span>
 
                     <div class="col-sm-12 justify-content-center mt-4">
-                        <input @* asp-for="PasswordHash" *@ type="password" name="Passwordhash"
+                        <input asp-for="Password" type="password"
                                placeholder="Password"
                                class="form-control" required />
                     </div>

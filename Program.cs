@@ -12,6 +12,7 @@ builder.Services.AddDbContext<HaloDocDbContext>(options =>
 options.UseNpgsql(builder.Configuration.GetConnectionString("HaloDocDbContext")));
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 
 var app = builder.Build();
