@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MjKLGNc0Mh4/7gHeuBVbhCEwWFhMsqygLKk5c7M6FoI=",
+  "Hash": "uhBPgSpZYN29aH7PQO7a9fTA8Lgtgmbr6jzVe8lwKS4=",
   "Source": "HaloDocWeb",
   "BasePath": "_content/HaloDocWeb",
   "Mode": "Default",
@@ -2616,6 +2616,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\pci68\\source\\repos\\HaloDocWeb\\wwwroot\\Upload\\Screenshot (13).png",
+      "SourceId": "HaloDocWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pci68\\source\\repos\\HaloDocWeb\\wwwroot\\",
+      "BasePath": "_content/HaloDocWeb",
+      "RelativePath": "Upload/Screenshot (13).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Screenshot (13).png"
+    },
+    {
+      "Identity": "C:\\Users\\pci68\\source\\repos\\HaloDocWeb\\wwwroot\\Upload\\Screenshot (15).png",
+      "SourceId": "HaloDocWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pci68\\source\\repos\\HaloDocWeb\\wwwroot\\",
+      "BasePath": "_content/HaloDocWeb",
+      "RelativePath": "Upload/Screenshot (15).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Screenshot (15).png"
     }
   ]
 }

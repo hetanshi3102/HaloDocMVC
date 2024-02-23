@@ -19,6 +19,7 @@ namespace HaloDocWeb.Controllers
             _authservice = authService;
         }
 
+
         public IActionResult Dashboard()
         {
             int? userId = HttpContext.Session.GetInt32("userId");
@@ -47,6 +48,62 @@ namespace HaloDocWeb.Controllers
             }
 
             return View("Error");
-        } 
+        }
+        //GET
+        public IActionResult Profile()
+        {
+            int? userId = HttpContext.Session.GetInt32("userId");
+            User? user = _context.Users.FirstOrDefault(u => u.UserId == userId);
+            HttpContext.Session.SetString("username", user.FirstName);
+
+            if (user != null)
+            {
+                string dobDate = user.IntYear + "-" + user.StrMonth + "-" + user.IntDate;
+
+                PatientProfile model = new()
+                {
+                    UserId = user.UserId,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Type = "Mobile",
+                    Phone = user.Mobile,
+                    Email = user.Email,
+                    Street = user.Street,
+                    City = user.City,
+                    State = user.State,
+                };
+
+                return View("Profile", model);
+            }
+            return RedirectToAction("Error");
+        }
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Profile(PatientProfile newdetails)
+        {
+            int? userId = HttpContext.Session.GetInt32("userId");
+
+            if (ModelState.IsValid)
+            {
+                _patientService.ProfileData(newdetails, userId);
+                return RedirectToAction("Profile", "PatientDashboard");
+
+            }
+            return View(newdetails);
+        }
+        public IActionResult SubmitForMe()
+        {
+            return View();
+        }
+        public IActionResult SubmitForSomeOneElse()
+        {
+            return View();
+        }
+        public IActionResult ViewDocument(int RequestId)
+        {
+            IEnumerable<RequestWiseFile> fileList = _context.RequestWiseFiles.Where(reqFile => reqFile.RequestId == RequestId);
+            return View(fileList);
+        }
     }
 }

@@ -12,6 +12,7 @@
           rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
           crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/1e35b465f7.js"
@@ -38,18 +39,21 @@
              alt=""
              class="logo-img" />
              <div class="d-flex align-items-center">
+            <p class="m-4">Welcome <strong class="text-info">@ViewData["User Name"]</strong></p>
+            <button class="btn btn-outline-primary logout-btn">
+                <a asp-controller="Home" asp-action="PatientLogin" class="link-color">Logout</a>
+            </button>
                 <div class="toggle-btn border-secondary" onclick="myFunction()">
-                    <p>Welcome <strong class="text-info">@ViewData["User Name"]</strong></p>
                     <i class="fa fa-2x fa-moon-o moon text-info border rounded p-2" aria-hidden="true"></i>
                 </div>
              </div>
     </header>
     <ul class="nav nav-tabs">
-        <li class="nav-item active">
-            <a asp-controller="PatientDashboard" asp-action="Dashboard" class="nav-link active"> Dashboard </a>
+        <li class="nav-item ">
+            <a asp-controller="PatientDashboard" asp-action="Dashboard" class="nav-link "> Dashboard </a>
         </li>
         <li class="nav-item">
-            <a asp-controller="PatientDashboard" asp-action="Profile" class="nav-link"> Profile </a>
+            <a asp-controller="PatientDashboard" asp-action="Profile" class="nav-link "> Profile </a>
         </li>
     </ul>
 
@@ -58,5 +62,17 @@
             @RenderBody()
         </main>
     </div>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
