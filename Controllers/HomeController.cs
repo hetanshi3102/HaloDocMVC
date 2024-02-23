@@ -4,6 +4,8 @@ using HaloDocRepository.Interface;
 using Microsoft.AspNetCore.Mvc;
 using HaloDocDataAccess.ViewModels;
 using HaloDocDataAccess.DataModels;
+using Microsoft.AspNetCore.Http;
+
 
 namespace HaloDocWeb.Controllers
 {
@@ -41,8 +43,9 @@ namespace HaloDocWeb.Controllers
             if (ModelState.IsValid)
             {
                 if (_authservice.PatientAuthentication(userdetails)){
-
-                    return RedirectToAction("PatientDashboard", "Home");
+                    User user = _context.Users.FirstOrDefault(Au => Au.Email == userdetails.Email);
+                    HttpContext.Session.SetInt32("userId", user.UserId);
+                    return RedirectToAction("Dashboard", "PatientDashboard");
                 }
 
 

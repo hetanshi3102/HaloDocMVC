@@ -44,3 +44,4 @@ C:\Users\pci68\source\repos\HaloDocWeb\bin\Debug\net7.0\HaloDocDataAccess.dll
 C:\Users\pci68\source\repos\HaloDocWeb\bin\Debug\net7.0\HaloDocRepository.dll
 C:\Users\pci68\source\repos\HaloDocWeb\bin\Debug\net7.0\HaloDocRepository.pdb
 C:\Users\pci68\source\repos\HaloDocWeb\bin\Debug\net7.0\HaloDocDataAccess.pdb
+C:\Users\pci68\source\repos\HaloDocWeb\obj\Debug\net7.0\scopedcss\Views\Shared\_PatientDashboardLayout.cshtml.rz.scp.css

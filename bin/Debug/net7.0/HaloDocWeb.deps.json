@@ -9,6 +9,7 @@
       "HaloDocWeb/1.0.0": {
         "dependencies": {
           "HaloDocRepository": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore.Design": "7.0.16",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.16",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11"
@@ -202,6 +203,7 @@
       "HaloDocRepository/1.0.0": {
         "dependencies": {
           "HaloDocDataAccess": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11"
         },
         "runtime": {

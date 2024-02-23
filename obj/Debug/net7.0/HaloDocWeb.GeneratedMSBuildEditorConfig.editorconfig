@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWJtaXRSZXEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/pci68/source/repos/HaloDocWeb/Views/PatientDashboard/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudERhc2hib2FyZFxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/pci68/source/repos/HaloDocWeb/Views/Requests/CreateBusReq.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdHNcQ3JlYXRlQnVzUmVxLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -75,3 +79,7 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/pci68/source/repos/HaloDocWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2ijezsc7b7
+
+[C:/Users/pci68/source/repos/HaloDocWeb/Views/Shared/_PatientDashboardLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXRpZW50RGFzaGJvYXJkTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-66sgqwpdlk

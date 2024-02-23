@@ -13,6 +13,13 @@ options.UseNpgsql(builder.Configuration.GetConnectionString("HaloDocDbContext"))
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IPatientService, PatientService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = ".HaloDocweb.Session";
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Adjust as needed
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 
 var app = builder.Build();
@@ -29,7 +36,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(

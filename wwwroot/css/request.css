@@ -203,3 +203,8 @@ div .map-btn{
     font-weight: 600;
     border-bottom: 2px solid #8dcaf0;
 }
+
+.dashboard{
+    position:relative;
+    top:150px;
+}
