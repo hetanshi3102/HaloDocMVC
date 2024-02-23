@@ -105,5 +105,34 @@ namespace HaloDocWeb.Controllers
             IEnumerable<RequestWiseFile> fileList = _context.RequestWiseFiles.Where(reqFile => reqFile.RequestId == RequestId);
             return View(fileList);
         }
+
+
+        public IActionResult UploadDoc(int Requestid, IFormFile? UploadFile)
+        {
+            string UploadImage;
+            if (UploadFile != null)
+            {
+                string FilePath = "wwwroot\\Upload";
+                string path = Path.Combine(Directory.GetCurrentDirectory(), FilePath);
+                if (!Directory.Exists(path))
+                    Directory.CreateDirectory(path);
+                string fileNameWithPath = Path.Combine(path, UploadFile.FileName);
+                UploadImage = UploadFile.FileName;
+                using (var stream = new FileStream(fileNameWithPath, FileMode.Create))
+                {
+                    UploadFile.CopyTo(stream);
+                }
+                var requestwisefile = new RequestWiseFile
+                {
+                    RequestId = Requestid,
+                    FileName = UploadFile.FileName,
+                    CreatedDate = DateTime.Now,
+                };
+                _context.RequestWiseFiles.Add(requestwisefile);
+                _context.SaveChanges();
+            }
+
+            return View("ViewDocument","PatientDashboard");
+        }
     }
 }
