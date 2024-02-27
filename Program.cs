@@ -13,6 +13,8 @@ options.UseNpgsql(builder.Configuration.GetConnectionString("HaloDocDbContext"))
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IPatientService, PatientService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
+
 builder.Services.AddSession(options =>
 {
     options.Cookie.Name = ".HaloDocweb.Session";

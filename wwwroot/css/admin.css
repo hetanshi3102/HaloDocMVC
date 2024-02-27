@@ -1,6 +1,18 @@
 ﻿body {
     background-color: #f0f0f0;
 }
+header {
+    z-index: 12;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 4px 7px -2px rgb(0 0 0 / 20%);
+}
 /*@*Tabs*@*/
 .activeNav {
     color: #8dcaf0 !important;
@@ -133,4 +145,31 @@ div .row {
 }
 .states{
     font-weight:400;
+}
+.form-group{
+    background-color:white;
+}
+div .small-btns{
+    width:5%;
+}
+.moon{
+    width:25px;
+}
+.i{
+    width:50px;
+}
+.Patient {
+    background-color: #5fbc61;
+}
+
+.Business {
+    background-color: #cd697b;
+}
+
+.Family {
+    background-color: #ed9124;
+}
+
+.Concierge {
+    background-color: #0a7cb9;
 }
