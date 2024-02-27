@@ -103,8 +103,13 @@ namespace HaloDocDataAccess.Controllers
 
             return PartialView("../Admin/_New", contacts);
         }
-
+        //GET
         public IActionResult ViewCase()
+        {
+            return View();
+        }
+        //GET
+        public IActionResult ViewNotes()
         {
             return View();
         }

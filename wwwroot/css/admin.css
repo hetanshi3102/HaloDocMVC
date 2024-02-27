@@ -173,3 +173,18 @@ div .small-btns{
 .Concierge {
     background-color: #0a7cb9;
 }
+.link-color{
+    text-decoration:none;
+    
+}
+.imp-links{
+    margin:35px;
+}
+.subnav{
+    position:relative;
+    top:80px;
+}
+main .viewcasecard{
+    position:relative;
+    top:50px;
+}

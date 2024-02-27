@@ -3,7 +3,7 @@
 
 <!--End Desktop Screen View of table-->
 <!--Important links-->
-<div class="d-flex justify-content-between mx-2">
+<div class="d-flex justify-content-between mx-2 imp-links">
     <div>
         <strong class="fs-6">Patients</strong> <small>(New) </small>
     </div>
@@ -151,8 +151,10 @@
 
                         @if (item.RequestTypeID != 2)
                         {
-                            <button class="btn border border-white text-white mt-2">
-                                <i class="fa-solid fa-phone pe-2"></i>
+                            <button class="btn border border-white text-white mt-2 justify-content-center align-items-center">
+                                <div>
+                                    <i class="fa-solid fa-phone pe-2"></i>
+                                </div>
                                 <small>@item.RequestorPhoneNumber</small>
                             </button>
                             <div>
@@ -177,9 +179,12 @@
                             <small>Actions</small>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i> View Case</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-card-checklist"></i> View Uploads</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-journals"></i> View Notes</a></li>
+                            <li><a class="dropdown-item" asp-controller="Admin" asp-action="ViewNotes"><i class="bi bi-journals"></i>Assign Case</a></li>
+                            <li><a class="dropdown-item"><i class="bi bi-card-checklist"></i>Cancel Case</a></li>
+                            <li><a class="dropdown-item" asp-controller="Admin" asp-action="ViewCase"><i class="bi bi-journal-text"></i> View Case</a></li>
+                            <li><a class="dropdown-item" asp-controller="Admin" asp-action="ViewNotes"><i class="bi bi-journals"></i> View Notes</a></li>
+                            <li><a class="dropdown-item" asp-controller="Admin" asp-action="ViewNotes"><i class="bi bi-journals"></i>Block Patient</a></li>
+
                         </ul>
 
                     </td>
@@ -224,7 +229,6 @@
                     <p> <i class="fa fa-envelope border border-info rounded-pill p-1 me-2"></i> Email : @item.Email</p>
                     <p> <i class="fa fa-phone border  border-info rounded-pill p-1 me-2"></i> Patient : @item.PhoneNumber</p>
                     <p><i class="fa fa-user border border-info rounded-pill p-1 me-2"></i>Requestor : @item.Requestor</p>
-
                     <div class="row">
                         <div class="col-6 mb-3">
                             <button class="btn btn-white text-white rounded-pill 2px w-100" style="background-color: #3ecc4e;">
